@@ -17,9 +17,9 @@
 # limitations under the License.
 #
 
-apt_repository "dotdeb-php54" do
+apt_repository "dotdeb-php55" do
   uri "http://packages.dotdeb.org"
-  distribution "squeeze-php54"
+  distribution "wheezy-php55"
   components ["all"]
   key "http://www.dotdeb.org/dotdeb.gpg"
 end
