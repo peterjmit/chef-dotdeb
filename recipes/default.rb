@@ -17,10 +17,12 @@
 # limitations under the License.
 #
 
+include_recipe "apt"
+
 apt_repository "dotdeb" do
   uri "http://packages.dotdeb.org"
   distribution "wheezy"
   components ["all"]
   key "http://www.dotdeb.org/dotdeb.gpg"
-  notifies :run, resources(:execute => "apt-get update"), :immediately
+  notifies :run, "execute[apt-get update]", :immediately
 end
